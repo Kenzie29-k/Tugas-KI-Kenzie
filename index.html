@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Informasi dan Statistik Kunjungan Industri Terbaik">
+    <meta name="author" content="Tim Kunjungan Industri">
+    <title>Presentasi Kunjungan Industri KI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+     /* Styling untuk header dan navbar */
+header {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: #fff;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Membuat jarak antara logo, menu, dan kontak */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Jarak antar menu */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffde59;
+    color: #333;
+}
+
+/* Kontak section (tulisan atau ikon kontak) */
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #6366f1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #ffde59;
+    color: #333;
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Membuat navbar menjadi kolom pada perangkat kecil */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5em;
+        padding: 10px 20px;
+    }
+
+    .contact-link {
+        font-size: 1.5em;
+    }
+}
+
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: #000000;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px 0;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+            text-align: center;
+        }
+
+        .stat-card img {
+            width: 100%;
+            height: auto;
+            max-width: 200px; /* Membatasi ukuran gambar agar lebih kecil */
+            margin: 0 auto;
+        }
+
+        .stat-card h3, .stat-card p {
+            padding: 10px 15px;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .images img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .images img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+
+          
+        }
+
+        .carousel-images img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: contain;
+        }
+
+        .carousel:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: #fff;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .carousel:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: #fff;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  width: 23%;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .social-media ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+footer .social-media ul li img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+footer .social-media ul li img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-section h4 {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
+}
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="logo">
+            <h1>Kunjungan Industri</h1> <!-- Bisa diganti dengan gambar logo -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chlorine.html">Chlorine</a></li>
+                <li><a href="unikom.html">Unikom</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <section class="content section" id="carousel">
+       
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="ciwalk slide 3.jpg" alt="Gambar Kunjungan 1">
+                <img src="image slide 1.png" alt="Gambar Kunjungan 2">
+                <img src="ciwalk slide 3.jpg" alt="Gambar Kunjungan 3">
+                <img src="ciwalk slide 3.jpg" alt="Gambar Kunjungan 4">
+                <img src="ciwalk slide image 2.jpg" alt="Gambar Kunjungan 5">
+            </div>
+        </div>
+    </section>
+
+  
+
+    <section class="content section" id="statistics">
+       
+        <div class="stats">
+            <div class="stat-card">
+                <img src="images.png" alt="Statistik Teknologi">
+                <h3>Chlorine</h3>
+                <p>PT Chlorine adalah perusahaan Digital Agency yang berfokus pada Branding, Design, Web Development dan Social Media Management.</p></p>
+            </div>
+            <div class="stat-card">
+                <img src="images (1).png" alt="Sektor Manufaktur">
+                <h3>Unikom</h3>
+                <p>Universitas Komputer Indonesia (disingkat UNIKOM) adalah sebuah perguruan tinggi swasta terkemuka yang berada di kota Bandung, Jawa Barat</p>
+            </div>
+            <div class="stat-card">
+                <img src="imagis.jpg" alt="Kepuasan Peserta">
+                <h3>Ciwalk</h3>
+                <p>Ciwalk adalah singkatan dari "Cihampelas Walk," yang merupakan sebuah pusat perbelanjaan terkenal yang terletak di Cihampelas, Bandung, Indonesia. Ciwalk menjadi salah satu destinasi utama untuk berbelanja, wisata kuliner, dan rekreasi, dengan berbagai macam toko, restoran, dan tempat hiburan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+  
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section contact">
+          <h4>Kontak</h4>
+          <ul>
+            <li><a href="mailto:email@domain.com">email@domain.com</a></li>
+            <li><a href="tel:+62123456789">+62 123 456 789</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section navigation">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chlorine.html">Chlorine</a></li>
+            <li><a href="unikom.html">Unikom</a></li>
+          </ul>
+        </div>
+        
+    
+        <div class="footer-section about">
+          <h4>Tentang Kami</h4>
+          <p>Kami adalah perusahaan yang berkomitmen untuk memberikan layanan terbaik di bidang [sebutkan bidang bisnis]. Kami selalu berusaha untuk memberikan pengalaman terbaik bagi pelanggan kami.</p>
+        </div>
+    
+        <div class="footer-section social-media">
+          <h4>Ikuti Kami</h4>
+          <ul>
+            <li><a href="https://wa.me/628123456789" target="_blank"><img src="download-removebg-preview.png" alt="WhatsApp"></a></li>
+            <li><a href="https://instagram.com/username" target="_blank"><img src="post-image-1674174982951-removebg-preview.png" alt="Instagram"></a></li>
+            <li><a href="https://tiktok.com/@username" target="_blank"><img src="e415d6bd27900cc066d0b8b23a7f1055.png" alt="TikTok"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+      
+      
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carousel-images img");
+        const totalImages = images.length;
+
+        function moveToNext() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            document.querySelector(".carousel-images").style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(moveToNext, 3000); // Bergulir setiap 3 detik
+    </script>
+</body>
+</html>

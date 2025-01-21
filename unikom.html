@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chlorine - Kunjungan Industri</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffde59;
+            transform: scale(1.1);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .slideshow-container {
+            flex: 1;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mySlides img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .location {
+            flex: 1;
+            background: #f4f4f9;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .location h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            width: 23%;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-media ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        footer .social-media ul li img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        footer .social-media ul li img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .footer-section h4 {
+                text-align: center;
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unikom</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chlorine.html">Chlorine</a></li>
+                <li><a href="unikom.html">Unikom</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Selamat Datang di Halaman Unikom</h2>
+        <div class="image-container">
+            <img src="images (1).png" alt="Gambar Chlorine">
+        </div>
+        <p>Saat di Unikom kita diperkenalkan tentang Universitas Komputer Indonesia (UNIKOM) secara resmi berdiri pada hari Selasa, tanggal 8 Agustus 2000 ...</p>
+        <p>pendiri unikom adalah Dr. Ir. Eddy Soeryanto Soegoto, merupakan Rektor dan Pendiri Universitas Komputer Indonesia (UNIKOM)</p>
+    </section>
+
+    <section class="content">
+        <h2>Galeri Dan Lokasi</h2>
+        <div class="flex-container">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="image unikom 1.jpg" alt="Proses Produksi Chlorine">
+                </div>
+                <div class="mySlides fade">
+                    <img src="image unikom 2.jpg" alt="Laboratorium Chlorine">
+                </div>
+            </div>
+            <div class="location">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.033863755536!2d107.61209307475676!3d-6.886547293112468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6f8aa08188b%3A0x632d24e6061e8903!2sUniversitas%20Komputer%20Indonesia!5e0!3m2!1sen!2sid!4v1737469969826!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><a href="mailto:email@domain.com">email@domain.com</a></li>
+                    <li><a href="tel:+62123456789">+62 123 456 789</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section navigation">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chlorine.html">Chlorine</a></li>
+                    <li><a href="unikom.html">Unikom</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section about">
+                <h4>Tentang Kami</h4>
+                <p>5 Jalur Masuk PMB Unikom
+                  USM (Ujian Saringan Masuk): Terbuka untuk semua jenjang (D3, S1, S2, dan S3) dengan ujian online, memudahkan bagi kamu yang berdomisili di luar kota.
+                  Rapor: Jalur D3 dan S1 dengan nilai rapor rata-rata 85 dari kelas 11 dan 12. ...
+                  Prestasi: Jalur D3 dan S1 dengan prestasi akademik atau non-akademik.</p>
+            </div>
+
+            <div class="footer-section social-media">
+                <h4>Ikuti Kami</h4>
+                <ul>
+                    <li><a href="https://wa.me/628123456789" target="_blank"><img src="download-removebg-preview.png" alt="WhatsApp"></a></li>
+                    <li><a href="https://instagram.com/username" target="_blank"><img src="post-image-1674174982951-removebg-preview.png" alt="Instagram"></a></li>
+                    <li><a href="https://tiktok.com/@username" target="_blank"><img src="e415d6bd27900cc066d0b8b23a7f1055.png" alt="TikTok"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+
+            // Menyembunyikan semua slide
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }    
+
+            slides[slideIndex - 1].style.display = "block";  
+
+            setTimeout(showSlides, 2000); // Mengubah slide setiap 2 detik
+        }
+
+        // Memulai slideshow saat halaman dimuat
+        showSlides();
+    </script>
+</body>
+</html>
